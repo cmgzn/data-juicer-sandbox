@@ -20,7 +20,7 @@ dependencies = [
     "py-data-juicer>=1.4.3",  # basic data-juicer
     "torch==2.6.0",
     "fire",
-    "pyspark",
+    "pyspark==3.5.5",
 ]
 
 [project.optional-dependencies]

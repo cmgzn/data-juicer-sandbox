@@ -139,7 +139,10 @@ class ModelscopeInferProbeExecutor(ModelScopeExecutor):
 
             self.executor = pipeline(**model_config)
         except ModuleNotFoundError:
-            raise ModuleNotFoundError("modelscope package not installed")
+            raise ModuleNotFoundError(
+                "`modelscope` package not installed. Please refer to the doc: "
+                "https://datajuicer.github.io/data-juicer/en/main/docs/Sandbox.html#requirements"
+            )
 
     async def _run(self, run_type, run_obj=None, **kwargs):
         if run_type == "infer_on_data":
