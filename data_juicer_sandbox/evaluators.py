@@ -1,9 +1,6 @@
 import os
 import shutil
 
-# TODO: cannot import tools correctly if DJ is installed by pypi. Maybe we need
-#       other importing methods.
-from data_jucier.tools.quality_classifier.predict import predict_score
 from data_juicer.core.data.dj_dataset import nested_query
 from loguru import logger
 
@@ -34,6 +31,10 @@ class Gpt3QualityEvaluator(BaseEvaluator):
                     os.remove(tmp_res_export_path)
                 if os.path.isdir(tmp_res_export_path):
                     shutil.rmtree(tmp_res_export_path)
+
+            # TODO: cannot import tools correctly if DJ is installed by pypi. Maybe we need
+            #       other importing methods.
+            from data_jucier.tools.quality_classifier.predict import predict_score
 
             overall_quality_stats = predict_score(input_data_path, tmp_res_export_path, overall_stats=True)
 

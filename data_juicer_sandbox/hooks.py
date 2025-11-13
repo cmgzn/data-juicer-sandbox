@@ -4,10 +4,6 @@ from copy import deepcopy
 
 from data_juicer.config import get_init_configs, prepare_side_configs
 from data_juicer.core.data.dj_dataset import nested_query
-
-# TODO: cannot import tools correctly if DJ is installed by pypi. Maybe we need
-#       other importing methods.
-from data_juicer.tools.hpo.execute_hpo_3sigma import modify_recipe_k_sigma
 from data_juicer.utils.constant import JobRequiredKeys
 from jsonargparse import dict_to_namespace
 from loguru import logger
@@ -304,6 +300,10 @@ class RefineRecipeViaKSigmaHook(BaseHook):
     def hook(self, **kwargs):
         path_k_sigma_recipe = self.extra_cfg.path_k_sigma_recipe
         # use k-sigma strategy to modify the data recipe
+        # TODO: cannot import tools correctly if DJ is installed by pypi. Maybe we need
+        #       other importing methods.
+        from data_juicer.tools.hpo.execute_hpo_3sigma import modify_recipe_k_sigma
+
         modify_recipe_k_sigma(self.dj_cfg, self.watcher.query(self.meta_name),
                               path_k_sigma_recipe)
         return path_k_sigma_recipe
