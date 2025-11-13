@@ -4,10 +4,13 @@ from copy import deepcopy
 
 from data_juicer.config import get_init_configs, prepare_side_configs
 from data_juicer.core.data.dj_dataset import nested_query
+
+# TODO: cannot import tools correctly if DJ is installed by pypi. Maybe we need
+#       other importing methods.
+from data_juicer.tools.hpo.execute_hpo_3sigma import modify_recipe_k_sigma
 from data_juicer.utils.constant import JobRequiredKeys
 from jsonargparse import dict_to_namespace
 from loguru import logger
-from tools.hpo.execute_hpo_3sigma import modify_recipe_k_sigma
 
 from data_juicer_sandbox.context_infos import ContextInfos, JobInfos
 from data_juicer_sandbox.factories import (

@@ -1,15 +1,14 @@
 import os
 import shutil
 
-from data_juicer.core.data.dj_dataset import nested_query
-from loguru import logger
-from tools.mm_eval.inception_metrics.calc_metrics_for_videos import calc_metrics
-
 # TODO: cannot import tools correctly if DJ is installed by pypi. Maybe we need
 #       other importing methods.
-from tools.quality_classifier.predict import predict_score
+from data_jucier.tools.quality_classifier.predict import predict_score
+from data_juicer.core.data.dj_dataset import nested_query
+from loguru import logger
 
 from data_juicer_sandbox.data_pool_manipulators import load_data_pool
+from thirdparty.mm_eval.inception_metrics.calc_metrics_for_videos import calc_metrics
 
 
 class BaseEvaluator(object):
