@@ -14,7 +14,7 @@ RuntimeError:
 ```
 - Reason: it might be the reason of incompatibility of CUDA, PyTorch, and bitsandbytes. Run `python -m bitsandbytes` for more details.
 - Solution:
-  - Remove the version limitation of bitsandbytes in `requirements/internvl_chat.txt` in the home of InternVL to avoid install the error version again when starting the env. Then reinstall it with `pip uninstall bitsandbytes && pip install bitsandbytes`.
+  - Remove the version limitation of bitsandbytes in `requirements/internvl_chat.txt` in the home of InternVL to avoid installing the wrong version again when starting the env. Then reinstall it with `pip uninstall bitsandbytes && pip install bitsandbytes`.
   - If the above solution does not work, reinstall the PyTorch that is compatible with the CUDA version of your GPU, and repeat the above step, until the command `python -m bitsandbytes` outputs SUCCESS.
   - Then, the `flash-attn` needs to be reinstalled as well.
 

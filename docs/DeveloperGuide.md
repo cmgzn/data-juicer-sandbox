@@ -33,7 +33,7 @@ Users can also extend the usage of these two parameters based on their implement
 
 ### DataPoolManipulator
 
-The core function of the data pool manipulator is to manipulate the data pool, such as construction, combination, sampling, etc. The data pool manipulator needs to inherit from the base class `BaseDataPoolManipulator` and implement the `run` method. The `run` method. The necessary parameters usually come from the input data pool configs in the `__init__` method, covering input data pools, export paths, and specific parameters for each type of manipulators.
+The core function of the data pool manipulator is to manipulate the data pool, such as construction, combination, sampling, etc. The data pool manipulator needs to inherit from the base class `BaseDataPoolManipulator` and implement the `run` method. The necessary parameters usually come from the input data pool configs in the `__init__` method, covering input data pools, export paths, and specific parameters for each type of manipulators.
 
 Users can refer to the doc string of the `run` method of each manipulator for more details [here](https://github.com/datajuicer/data-juicer-sandbox/blob/main/data_juicer_sandbox/data_pool_manipulators.py).
 
@@ -168,7 +168,7 @@ class Env(ABC):
 ```
 
 It consists of five main abstract methods:
-- `create`: create an environment if it's not existing.
+- `create`: create an environment if it does not exist.
 - `check_availability`: check the availability of the environment manager (e.g., `conda`, `venv`).
 - `exists`: check if an environment exists.
 - `install_py_deps`: install Python dependencies. Usually support three ways: a "requirements.txt" file path, a dependency list, or a directory path to a library code base.
@@ -186,9 +186,9 @@ env_manager = 'conda'
 env_name = 'new_conda_env'
 
 # create an environment
-env =  ENV_ROUTER[env_manager](
-  env_name=env_name,
-  env_manager=env_manager)
+env = ENV_ROUTER[env_manager](
+    env_name=env_name,
+    env_manager=env_manager)
 # check the availability
 if not env.check_availability():
     # this env manager is not available

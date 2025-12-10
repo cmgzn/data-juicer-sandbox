@@ -189,9 +189,9 @@ env_manager = 'conda'
 env_name = 'new_conda_env'
 
 # 创建一个环境
-env =  ENV_ROUTER[env_manager](
-  env_name=env_name,
-  env_manager=env_manager)
+env = ENV_ROUTER[env_manager](
+    env_name=env_name,
+    env_manager=env_manager)
 # 检查环境管理器可用性
 if not env.check_availability():
     # 该环境管理器不可用
