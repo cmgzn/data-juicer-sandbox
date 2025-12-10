@@ -592,7 +592,7 @@ uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </s
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;modelscope[framework,nlp]&quot;</span><span class="w"> </span>-f<span class="w"> </span>https://modelscope.oss-cn-beijing.aliyuncs.com/releases/repo.html
 </pre></div>
 </div>
-<p>Please refer the the <a class="reference external" href="https://www.modelscope.cn/docs/Beginner-s-Guide/Environment-Setup">ModelScope documentation</a> for more information.</p>
+<p>Please refer to the <a class="reference external" href="https://www.modelscope.cn/docs/Beginner-s-Guide/Environment-Setup">ModelScope documentation</a> for more information.</p>
 <ol class="arabic simple" start="2">
 <li><p>To use <a class="reference external" href="https://github.com/aigc-apps/EasyAnimate">EasyAnimate</a>, you need to execute the following installation script:</p></li>
 </ol>
@@ -685,7 +685,7 @@ bash<span class="w"> </span>setup_easyanimate.sh
 <p>For the single-pipeline format, the only pipeline is named “anonymous” in default.</p>
 <blockquote>
 <div><p>[!Important]</p>
-<p>The single pipeline format without <code class="docutils literal notranslate"><span class="pre">pipelines</span></code> field and the multi-pipeline format with <code class="docutils literal notranslate"><span class="pre">pipelines</span></code> field are both supported but can not be used at the same time.</p>
+<p>The single pipeline format without <code class="docutils literal notranslate"><span class="pre">pipelines</span></code> field and the multi-pipeline format with <code class="docutils literal notranslate"><span class="pre">pipelines</span></code> field are both supported but cannot be used at the same time.</p>
 </div></blockquote>
 </section>
 <section id="start-sandbox">
@@ -1060,7 +1060,7 @@ bash<span class="w"> </span>setup_easyanimate.sh
 </div>
 <p>In this hook, it uses all three parameters:</p>
 <ul class="simple">
-<li><p>In <code class="docutils literal notranslate"><span class="pre">input</span></code>, the hook replaces the <code class="docutils literal notranslate"><span class="pre">dataset_path</span></code> in the <code class="docutils literal notranslate"><span class="pre">dj_configs</span></code> in YAML format with the value of the <code class="docutils literal notranslate"><span class="pre">res4_key</span></code> stored in the context infos of the previous hook with <code class="docutils literal notranslate"><span class="pre">meta_name</span></code> “name3” in the pipeline named “pipeline1”. Beside, it replace the <code class="docutils literal notranslate"><span class="pre">meta_paths</span></code> in the <code class="docutils literal notranslate"><span class="pre">extra_configs</span></code> with the value of the <code class="docutils literal notranslate"><span class="pre">res5_key</span></code> stored in the context infos of the previous hook specified by “-1”.</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">input</span></code>, the hook replaces the <code class="docutils literal notranslate"><span class="pre">dataset_path</span></code> in the <code class="docutils literal notranslate"><span class="pre">dj_configs</span></code> in YAML format with the value of the <code class="docutils literal notranslate"><span class="pre">res4_key</span></code> stored in the context infos of the previous hook with <code class="docutils literal notranslate"><span class="pre">meta_name</span></code> “name3” in the pipeline named “pipeline1”. Besides, it replaces the <code class="docutils literal notranslate"><span class="pre">meta_paths</span></code> in the <code class="docutils literal notranslate"><span class="pre">extra_configs</span></code> with the value of the <code class="docutils literal notranslate"><span class="pre">res5_key</span></code> stored in the context infos of the previous hook specified by “-1”.</p></li>
 <li><p>In <code class="docutils literal notranslate"><span class="pre">output</span></code>, the hook outputs two results named <code class="docutils literal notranslate"><span class="pre">res6_key</span></code> and <code class="docutils literal notranslate"><span class="pre">res7_key</span></code>, which will be stored in the context infos as following:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>

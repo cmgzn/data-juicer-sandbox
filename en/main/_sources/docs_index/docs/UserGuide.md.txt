@@ -54,7 +54,7 @@ And prepare third-party libraries used in sandbox (e.g., EasyAnimate, VBench, In
 ```shell
 uv pip install "modelscope[framework,nlp]" -f https://modelscope.oss-cn-beijing.aliyuncs.com/releases/repo.html
 ```
-Please refer the the [ModelScope documentation](https://www.modelscope.cn/docs/Beginner-s-Guide/Environment-Setup) for more information.
+Please refer to the [ModelScope documentation](https://www.modelscope.cn/docs/Beginner-s-Guide/Environment-Setup) for more information.
 
 
 2. To use [EasyAnimate](https://github.com/aigc-apps/EasyAnimate), you need to execute the following installation script:
@@ -158,7 +158,7 @@ For the single-pipeline format, the only pipeline is named "anonymous" in defaul
 
 > [!Important]
 > 
-> The single pipeline format without `pipelines` field and the multi-pipeline format with `pipelines` field are both supported but can not be used at the same time.
+> The single pipeline format without `pipelines` field and the multi-pipeline format with `pipelines` field are both supported but cannot be used at the same time.
 
 ### Start Sandbox
 
@@ -323,7 +323,7 @@ xxx_hook:
 ```
 
 In this hook, it uses all three parameters:
-- In `input`, the hook replaces the `dataset_path` in the `dj_configs` in YAML format with the value of the `res4_key` stored in the context infos of the previous hook with `meta_name` "name3" in the pipeline named "pipeline1". Beside, it replace the `meta_paths` in the `extra_configs` with the value of the `res5_key` stored in the context infos of the previous hook specified by "-1".
+- In `input`, the hook replaces the `dataset_path` in the `dj_configs` in YAML format with the value of the `res4_key` stored in the context infos of the previous hook with `meta_name` "name3" in the pipeline named "pipeline1". Besides, it replaces the `meta_paths` in the `extra_configs` with the value of the `res5_key` stored in the context infos of the previous hook specified by "-1".
 - In `output`, the hook outputs two results named `res6_key` and `res7_key`, which will be stored in the context infos as following:
 ```python
 {
