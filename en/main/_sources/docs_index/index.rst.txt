@@ -1,17 +1,17 @@
-====
 DOCS
 ====
 
-the documentation for the project
-
 .. toctree::
    :maxdepth: 2
-   :glob:
 
-   guides/*
-
-.. toctree::
-   :maxdepth: 2
-   :glob:
-   
+   docs/UserGuide
+   docs/DeveloperGuide
+   docs/QA
    docs/*
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   :caption: Third-party
+
+   thirdparty/**/*
